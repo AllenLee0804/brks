@@ -53,14 +53,14 @@ function TestProtocol:setUp()
     assert(status, 'Failed to connect to serverle_code')
 end
 
---[[
+
 function TestProtocol:test_brk_get_mobile_code_right()
     --print( "called this unit case")
     local r = client:brk_get_mobile_code('15200599665')
     lu.assertEquals(r.resultCode, 200)
 end
 
-
+--[[
 function TestProtocol:test_brk_user_login_success()
      --print( "called this unit case")
      local r = client:brk_login('15200599665', '084135')
